@@ -8,13 +8,14 @@ spec:
   chart:
     spec:
       chart: kube-prometheus-stack
-      version: "x.x.x"
+      version: "61.3.0"
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
         namespace: flux-system
+  install:
+    createNamespace: true
   targetNamespace: monitoring
-  createTargetNamespace: true 
   values:
     grafana:
       enabled: true
